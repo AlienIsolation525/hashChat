@@ -52,23 +52,11 @@ int main()
 
         RegUsers(chat);
         chat.unreg((char*)"userUnreg");
+        // Succesful login attempt
         if (chat.login((char*)"user1", (char*)"as", sizeof("user1")))  throwWhere("in c.login() user1 |ERROR: Fail login attempt!");
+        // Fail login attempt
         if (!chat.login((char*)"user2", (char*)"a1s", sizeof("user2")))  throwWhere("in c.login() user2 |ERROR: Fail login attempt!");
-        /*
-        if (!c.login((char*)"user2", (char*)"asdfg", sizeof("asdfg")))  throwWhere("in c.login() user2");
-        if (!c.login((char*)"user3", (char*)"zsdrt", sizeof("zsdrt")))  throwWhere("in c.login() user3");
-        if (!c.login((char*)"user3", (char*)"zsdrt", sizeof("zsdrt")))  throwWhere("in c.login() user3");
-        if (!c.login((char*)"user4", (char*)"pasgas", sizeof("pasgas")))  throwWhere("in c.login() user4");
-        if (!c.login((char*)"xzxvxcccc", (char*)"pasgas", sizeof("pasgas")))  throwHere("in c.login() xzxvxcccc");
-        if (!c.login((char*)"123", (char*)"pasgas", sizeof("pasgas")))  throwHere("in c.login() 123");
-        if (!c.login((char*)"34", (char*)"pasgas", sizeof("pasgas")))  throwHere("in c.login() 34");
-
-        if (c.login((char*)"111", (char*)"pasgas", sizeof("pasgas")))  throwHere("in c.login() 111");
-        if (c.login((char*)"dfd11111", (char*)"pasgas", sizeof("pasgas")))  throwHere("in c.login() dfd11111");
-
-        if (c.login((char*)"user2", (char*)"qwerty12345", sizeof("qwerty12345"))) throwHere("in test() user2 bad pass");
-        if (c.login((char*)"non-exuser", (char*)"pass", sizeof("pass"))) throwHere("in test() non-ex_user");
-        */
+        
         flag = true;
     }
     catch (...) {

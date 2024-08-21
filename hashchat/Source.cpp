@@ -46,8 +46,6 @@ int main()
     bool flag = false;
     setlocale(LC_CTYPE, "rus");
     try {
-
-
         Chat chat;
 
         RegUsers(chat);
